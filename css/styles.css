@@ -106,6 +106,10 @@ header {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -142,6 +146,10 @@ header {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .auth-nav-icon:hover,
 .auth-nav-icon:focus {
@@ -154,6 +162,10 @@ header {
 .auth-nav-icon {
   fill: currentColor;
   margin-right: 10px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* section */
 .section {
@@ -296,6 +308,9 @@ img {
 }
 .social-icon {
   fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-item {
   display: flex;
@@ -314,6 +329,10 @@ img {
   align-items: center;
   justify-content: center;
   background-color: white;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
@@ -380,6 +399,7 @@ img {
 }
 .customer-icon {
   fill: var(--icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-link {
   display: flex;
@@ -389,6 +409,7 @@ img {
   justify-content: center;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-link:hover,
 .customer-link:focus {
@@ -436,6 +457,9 @@ img {
   line-height: 1.7;
 
   color: #fff;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .auth-footer .white-link:hover,
 .auth-footer .white-link:focus {
@@ -447,6 +471,9 @@ img {
   line-height: 1.7;
 
   color: rgba(255, 255, 255, 0.6);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .auth-footer .link:hover,
 .auth-footer .link:focus {
@@ -489,6 +516,10 @@ address {
 }
 .join-icon {
   fill: var(--background-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .join-item {
   display: flex;
@@ -507,6 +538,9 @@ address {
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .join-link:hover,
 .join-link:focus {
@@ -528,6 +562,7 @@ address {
   color: var(--background-main-portf);
 }
 .button-portfolio {
+  font-weight: 700;
   border: transparent;
   min-width: 73px;
   padding: 6px 22px;
@@ -536,9 +571,12 @@ address {
   line-height: 1.6;
   text-align: center;
   cursor: pointer;
-
   color: var(--title-text-color);
   background-color: var(--buttoms-portfolio-background);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .buttom-porfolio-item {
   border-radius: 4px;
@@ -572,7 +610,11 @@ address {
 .link-card {
   cursor: pointer;
   display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .link-card:hover,
 .link-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -660,6 +702,7 @@ address {
   border-radius: 4px;
 }
 .button-close-modal {
+  padding: 6px;
   top: 0;
   right: 0;
   position: absolute;
@@ -670,6 +713,7 @@ address {
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 50%;
+  background-color: var(--background-color);
 }
 .modal-icon {
   border-radius: 50%;
@@ -678,5 +722,5 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--background-color);
+  fill: black;
 }
