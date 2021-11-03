@@ -634,6 +634,11 @@ address {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.link-card:hover .overlay-description,
+.link-card:focus .overlay-description {
+  transform: translateY(0);
+}
+
 .portfolio-section-title {
   font-weight: 700;
   font-size: 18px;
@@ -650,7 +655,6 @@ address {
 }
 
 .product-description {
-  margin-top: 4px;
   font-style: Regular;
   font-weight: 400;
   font-size: 16px;
@@ -658,40 +662,31 @@ address {
 
   color: var(--primary-text-color);
 }
-.card-thumb {
-  position: relative;
-}
-.card-thumb::before {
-  top: 0px;
-  position: absolute;
-  content: "";
+.overlay-container {
   width: 100%;
   height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
+  position: relative;
+  overflow: hidden;
 }
-.card-thumb:hover::before {
-  opacity: 1;
-}
-.thumb-description-card:hover {
-  opacity: 1;
-}
-.thumb-description-card {
-  opacity: 0;
-  bottom: 0px;
+.overlay-description {
+  top: 0;
   position: absolute;
-  width: 370px;
-}
-.portfolio-hover-description {
+  display: block;
+  width: 100%;
+  height: 100%;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
-  letter-spacing: 0.03em;
   color: var(--background-color);
   padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
 
-  /* модалка */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* модалка */
+
 .backdrop {
   position: fixed;
   top: 0;
