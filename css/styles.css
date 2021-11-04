@@ -452,8 +452,12 @@ img {
   color: var(--background-color);
   background-color: var(--akcent-color);
 }
+.button:hover,
 .button:focus {
-  background-color: var(--akcent-color);
+  animation-name: changeBgColor;
+  animation-duration: 3000ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-iteration-count: infinite;
 }
 /* footer */
 .footer {
@@ -725,6 +729,12 @@ address {
   border-radius: 50%;
   background-color: var(--background-color);
 }
+.button-close-modal:hover {
+  animation-name: changeBgColor;
+  animation-duration: 3000ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-iteration-count: infinite;
+}
 .modal-icon {
   border-radius: 50%;
   width: 100%;
@@ -733,4 +743,18 @@ address {
   align-items: center;
   justify-content: center;
   fill: black;
+}
+
+@keyframes changeBgColor {
+  0% {
+    background-color: teal;
+  }
+
+  50% {
+    background-color: orange;
+  }
+
+  100% {
+    background-color: deepskyblue;
+  }
 }
